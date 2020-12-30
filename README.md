@@ -130,3 +130,27 @@ list.reverse()
  
 print(list)     # [30, 20, 10, 0]
 ```
+
+<br>
+
+## 최대공약수, 최소공배수
+- `math` 모듈에 있는 `gcd`함수를 사용해서 쉽게 구할 수 있다.
+- **최대공약수(Greatest Common Divisor)** : 두 수의 약수들 중 최대값
+- **최소공배수(Least Common Multiple)** : 두 수의 곱에서 두 수의 최대공약수를 나눈 것과 같다.
+```python
+from math import gcd
+
+_gcd = gcd(3, 12)           # 최대공약수
+_lcm = (3 * 12) // _gcd     # 최소공배수
+
+print(_gcd, _lcm)           # result : 3 12
+```
+
+<br>
+
+## abs( )
+- 절대값을 반환해주는 함수
+```python
+abs(-3)      # result : 3
+abs(12)      # result : 12
+```
