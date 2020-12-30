@@ -1,0 +1,7 @@
+SELECT NAME, DATETIME 
+FROM ANIMAL_INS 
+ORDER BY ANIMAL_ID DESC;
+
+-- ORDER BY를 통해 정렬할 수 있다.
+-- DESC : 내림차순(역순정렬)
+-- ASC  : 오름차순
