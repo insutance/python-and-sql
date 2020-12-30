@@ -1,0 +1,4 @@
+SELECT COUNT(DISTINCT NAME)
+FROM ANIMAL_INS
+
+-- DISTINCT 를 사용해 중복 값을 제거할 수 있다.
