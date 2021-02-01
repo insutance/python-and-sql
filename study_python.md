@@ -168,3 +168,26 @@ print(a)    # result : [1,2,3,4]
 a = list(map(str,a))
 print(a)    # reslut : ['1', '2', '3', '4']
 ```
+
+<br>
+
+## 2진수, 8진수, 16진수
+- 2진수 : `bin()`, 0b
+- 8진수 : `oct()`, 0o
+- 16진수 : `hex()`, 0x
+```python
+#return type == str
+print(bin(72))      #result : '0b1001000'
+print(oct(72))      #result : '0o110'
+print(hex(72))      #result : '0x48'
+```
+
+```python
+"""
+1) 진수로 표현된 str을 다시 숫자로 만들고 싶을 때 int() 사용
+2) 2번째 인자로 진수의 base값을 넘겨주면 됨
+"""
+print(int('0b1001000', 2))  #result : 72
+print(int('0o110', 8))      #result : 72
+print(int('0x48', 16))      #result : 72
+```
