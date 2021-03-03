@@ -6,6 +6,8 @@
 - [문자열 변경하기 - replace()](#replace)
 - [유니온 - union](#union)
 
+<br>
+
 <h3 name="ceil-round-floor">📌 올림, 반올림, 내림</h3>
 
 1. 올림 `ceil()`
