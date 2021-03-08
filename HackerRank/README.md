@@ -4,7 +4,9 @@
 - [문자열 자르기 - left(), substring(), right()](#left-substring-right)
 - [문자열 더하기 - concat()](#concat)
 - [문자열 변경하기 - replace()](#replace)
+- [문자열 반복 - repeat()](#repeat)
 - [유니온 - union](#union)
+- [사용자 정의 변수 - set](#set)
 
 <br>
 
@@ -111,7 +113,7 @@ FROM test.actor
 
 </br>
 
-<h3 name="concat">📌 문자열 더하기</h3>
+<h3 name="concat">📌 문자열 더하기 - concat()</h3>
 
 `CONCAT()` : 문자열 이어주는 역할
 
@@ -121,7 +123,7 @@ FROM test.actor
 
 </br>
 
-<h3 name="replace">📌 문자 변경하기</h3>
+<h3 name="replace">📌 문자 변경하기 - replace()</h3>
 
 `replace(칼럼명, '변경하려고 하는 문자', '변경할 문자')`<br>
 ```
@@ -147,6 +149,29 @@ from test.actor;
 
 </br>
 
+<h3 name="repeat">📌 문자열 반복 - repeat()</h3>
+
+형식 : `repeat(str, count)`<br>
+`str`은 반복할 문자이고 `count`는 반복되는 횟수이다.
+```sql
+set @number := 5; 
+
+select repeat('* ', @number := @number-1)
+from information_schema.tables
+limit 5;
+```
+```sql
+--result
+
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
+```
+
+</br>
+
 <h3 name="union">📌 union</h3>
 
 `union`은 여러개의 SQL문을 합쳐 하나의 SQL문으로 만들어주는 방법이다.<br>
@@ -158,3 +183,20 @@ from test.actor;
 <`union` 규칙>
 - 칼럼명이 같아야 한다. (같지 않다면 `AS`를 사용하여 같게 만든다.)
 - 칼럼별 데이터타입이 같아야 한다.
+
+</br>
+
+<h3 name="set">📌 사용자 정의 변수 - set</h3>
+
+```sql
+-- 사용자 정의 변수 선언 및 초기화
+
+set @변수이름 = 대입값;
+set @변수이름 := 대입값;
+
+select @변수이름 := 대입값; -- 출력까지 할 때.
+```
+대입 연산자 `:=` <br>
+set 이외의 명령문에서는 `=`가 비교연산자로 취급되기 때문에 SELECT로 변수를 선언하고 값을 대입할 때는 `:=`를 사용한다.
+
+저장하는 값에 의해 자료형이 정해지며, `Integer`, `Decimal`, `Float`, `Binary` 그리고 `String` 타입만 취급할 수 있다. 또한 변수를 초기화 하지 않은 경우 값은 `NULL`, 자료형은 `String` 타입이다.
