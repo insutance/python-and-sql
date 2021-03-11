@@ -7,6 +7,9 @@
 - [문자열 반복 - repeat()](#repeat)
 - [유니온 - union](#union)
 - [사용자 정의 변수 - set](#set)
+- [절대값 - abs()](#abs)
+- [pow(x,y) - x의 y 제곱근](#pow)
+- [sqrt(x) - 양수 x에 대한 제곱근](#sqrt)
 
 <br>
 
@@ -200,3 +203,37 @@ select @변수이름 := 대입값; -- 출력까지 할 때.
 set 이외의 명령문에서는 `=`가 비교연산자로 취급되기 때문에 SELECT로 변수를 선언하고 값을 대입할 때는 `:=`를 사용한다.
 
 저장하는 값에 의해 자료형이 정해지며, `Integer`, `Decimal`, `Float`, `Binary` 그리고 `String` 타입만 취급할 수 있다. 또한 변수를 초기화 하지 않은 경우 값은 `NULL`, 자료형은 `String` 타입이다.
+
+</br>
+
+<h3 name="abs">📌 절대값 - abs()</h3>
+
+`abs(x)`는 x의 절대값을 구하는 함수이다.
+```sql
+select abs(32);     --result : 32
+select abs(-3210);  --result : 3210
+select abs(-1);     --result : 1
+```
+
+</br>
+
+<h3 name="pow">📌 pow(x,y) - x의 y 제곱근</h3>
+
+`pow(x,y)`는 POWER 의 동의어로 x의 y제곱근 값을 반환한다.
+```sql
+select pow(2, 4);   --result : 16 (= 2^4)
+select pow(2, 2);   --result : 4 (=2^2)
+```
+
+</br>
+
+<h3 name="sqrt">📌 sqrt(x) - 양수 x에 대한 제곱근</h3>
+
+`sqrt(x)`는 **양수** x 에 대한 제곱근을 반환한다.
+```sql
+select sqrt(4);     --result : 2
+select sqrt(40);    --result : 6.324555320336759
+select sqrt(-16);   --result : NULL
+```
+
+</br>
