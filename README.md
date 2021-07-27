@@ -16,8 +16,8 @@
     └── programmers
 ```
 
-## Python
+## 📁 [python](https://github.com/insutance/python-and-sql/tree/main/python)
 각 사이트별 Python 관련 문제 풀이 및 공부
 
-## SQL
+## 📁 [_sql](https://github.com/insutance/python-and-sql/tree/main/_sql)
 각 사이트별 SQL 문제 풀이 및 공부
